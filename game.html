@@ -1,0 +1,29 @@
+<script>
+
+// This is a simple guessing game for users to guess
+// how many college football games have I watched a game.
+// This is Day 1 assignment for Code Fellows B33 Bootcamp
+// I have been to 33 college football stadiums
+
+var guess, answer = 33, message;
+console.log(answer);
+
+// Ask users for their initial imput
+guess = prompt('Can you guess how many stadiums that David has watched a college football game?');
+console.log(guess);
+
+while(guess != answer) {
+  if(guess < 44 && guess > 22) {
+  guess = prompt("That's not quite it, but you are close! Keep playing. HINT: You are within 10. Try again!");
+  } else {
+  guess = prompt("Bummer. You are not even close. Please try again.");
+  };
+}
+
+if(guess == answer) {
+  message = "Brilliant!! Congratulations! You are correct!";
+}
+
+alert(message);
+
+</script>

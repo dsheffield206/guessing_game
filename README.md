@@ -10,3 +10,9 @@ The While Loop is initiated when the user returns the wrong answer.
 We corrected this by prompting the user to submit an additional input with 2 different responses.
 Once the user selects the correct number, the program ends.
 Because the answer was a number, I was introduced to the concept of parseInt( ), which was currently unknown.
+
+We made some changes to make it easier to guess the answer
+We added a hint on line 12
+We cleaned up indentations and changed from double to single quotes.
+We created a function to define above or below for guesses within 10.
+We called the new function in the while loop.

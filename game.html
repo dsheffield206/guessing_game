@@ -5,23 +5,38 @@
 // This is Day 1 assignment for Code Fellows B33 Bootcamp
 // I have been to 33 college football stadiums
 
-var guess, answer = 33, message;
+var guess = 0, answer = 33, message, difference = 0;
 console.log(answer);
 
 // Ask users for their initial imput
-guess = prompt('Can you guess how many stadiums that David has watched a college football game?');
+guess = prompt('Can you guess how many stadiums that David has watched a college football game? HINT: It is between 1 and 100');
+guess = parseInt(guess);
 console.log(guess);
 
+//new function that calls above or below guess
+function aboveOrBelow(guess, answer) {
+    difference = guess - answer;
+    if (difference > 0) {
+      return('above');
+   } else {
+      return('below');
+  }
+  }
+console.log(difference);
+
 while(guess != answer) {
+
   if(guess < 44 && guess > 22) {
-  guess = prompt("That's not quite it, but you are close! Keep playing. HINT: You are within 10. Try again!");
+    alert('That is not quite it, but you are ' + aboveOrBelow(guess, answer) + ' by ' + Math.abs(difference) + '. Keep playing.' );
+    guess = prompt('Guess again', 'Last guess was ' + guess);
   } else {
-  guess = prompt("Bummer. You are not even close. Please try again.");
+alert('Not even close. You are ' + aboveOrBelow(guess, answer) + ' by ' + Math.abs(difference) + '. Try again.' );
+      guess = prompt('Your last guess was ' + guess);
   };
 }
 
 if(guess == answer) {
-  message = "Brilliant!! Congratulations! You are correct!";
+  message = 'Brilliant!! Congratulations! You are correct!';
 }
 
 alert(message);

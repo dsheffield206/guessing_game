@@ -18,7 +18,7 @@ var Question = function (answer, question, message) {
 
   while(this.guess != this.answer) {
     if(this.guess < 44 && this.guess > 22) {
-      alert('That is not quite it, but you are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Keep playing.' );
+      alert('That is not quite it, but you are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Keep playing.');
       this.guess = prompt('Guess again', 'Last guess was ' + this.guess);
     } else {
       alert('Not even close. You are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Try again.' );

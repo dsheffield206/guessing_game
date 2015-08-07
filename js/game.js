@@ -1,4 +1,4 @@
-<script>
+
 'use strict';
 
 // This is a simple guessing game for users to guess
@@ -52,59 +52,3 @@ b33.run();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var guess = 0, answer = 33, message, difference = 0;
-// console.log(answer);
-
-// // Ask users for their initial imput
-// guess = prompt('Can you guess how many stadiums that David has watched a college football game? HINT: It is between 1 and 100');
-
-// console.log(guess);
-
-// //new function that calls above or below guess
-// function aboveOrBelow(guess, answer) {
-//     difference = guess - answer;
-//     if (difference > 0) {
-//       return('above');
-//    } else {
-//       return('below');
-//   }
-//   }
-// console.log(difference);
-
-// while(guess != answer) {
-
-//   if(guess < 44 && guess > 22) {
-//     alert('That is not quite it, but you are ' + aboveOrBelow(guess, answer) + ' by ' + Math.abs(difference) + '. Keep playing.' );
-//     guess = prompt('Guess again', 'Last guess was ' + guess);
-//   } else {
-// alert('Not even close. You are ' + aboveOrBelow(guess, answer) + ' by ' + Math.abs(difference) + '. Try again.' );
-//       guess = prompt('Your last guess was ' + guess);
-//   };
-// }
-
-// if(guess == answer) {
-//   message = 'Brilliant!! Congratulations! You are correct!';
-// }
-
-// alert(message);
-
-</script>

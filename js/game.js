@@ -11,23 +11,27 @@ var Question = function (answer, question, message) {
  this.difference = 0;
  this.question = question;
  this.message = message;
+ this.response = ' ';
  this.run = function() {
   this.guess = prompt(question);
+  addToGuessList(this.guess);
   this.guess = parseInt(this.guess);
   console.log(this.guess);
 
+  var gameResponse = document.getElementById('game-response');
   while(this.guess != this.answer) {
     if(this.guess < 44 && this.guess > 22) {
-      alert('That is not quite it, but you are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Keep playing.');
+      this.response = ('That is not quite it, but you are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Keep playing.');
       this.guess = prompt('Guess again', 'Last guess was ' + this.guess);
     } else {
-      alert('Not even close. You are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Try again.' );
+      this.response = ('Not even close. You are ' + this.aboveOrBelow() + ' by ' + Math.abs(this.difference) + '. Try again.' );
       this.guess = prompt('Your last guess was ' + this.guess);
     }
+    gameResponse.innerHTML = this.response;
   }
 
   if(this.guess == this.answer) {
-    alert(this.message);
+    this.resposne = this.message;
   }
  };
 
@@ -41,13 +45,23 @@ var Question = function (answer, question, message) {
   }
 }
 
+// No longer firing alerts but now passing this.response into DOM
+
+
+function addToGuessList(xx) {
+  var guessListItem = document.createElement('li');
+  var guessNode = document.createTextNode(xx);
+  guessListItem.appendChild(guessNode);
+  document.getElementById('guess-list').appendChild(guessListItem);
+}
 
 var stadium = new Question (33, 'Can you guess how many stadiums that David has watched a college football game? HINT: It is between 1 and 100', 'Brilliant!! Congratulations! You are correct!');
 
-var b33 = new Question (23, 'How many students are in this class?', '23 AMAZING PEOPLES!!! JUST DO IT! BE LIKE MIKE aka MJ_23!')
+var b33 = new Question (22, 'How many students are in this class?', '22 AMAZING PEOPLES!!!')
 
 stadium.run();
 b33.run();
+
 
 
 

@@ -1,7 +1,6 @@
 ### Code Fellows Week 1 Assignment - Simple Guessing Game
 
 #### Guessing Game - Summary
-
 + This is a simple guessing game for users to guess how many college football stadiums where have I watched a game. The answer to this question is finite, as I have been to 33 college football stadiums.
 + This is Week 1 assignment for Code Fellows B33 Bootcamp.
 + At first I created a simple question with 3 responses.
